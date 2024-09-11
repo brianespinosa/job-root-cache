@@ -14,5 +14,6 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.event.repository.name }}
         run: |
           gh cache delete job-setup-cache-${{ github.run_id }}-${{ runner.os }}
