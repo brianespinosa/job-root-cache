@@ -15,6 +15,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git init --bare
-          gh extension install actions/gh-actions-cache
-          gh actions-cache delete job-setup-cache-${{ github.run_id }}-${{ runner.os }} --confirm
+          gh cache delete job-setup-cache-${{ github.run_id }}-${{ runner.os }}
