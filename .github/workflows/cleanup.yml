@@ -1,6 +1,4 @@
 name: 'job-root-cache/cleanup'
-author: 'Brian Espinosa'
-description: 'Reusable workflow that will remove/cleanup a cache of the root directory to be used after clone and install.'
 
 on:
   workflow_call:
