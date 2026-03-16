@@ -44,12 +44,11 @@ jobs:
       - uses: brianespinosa/job-root-cache/restore@main
       - run: yarn test
 
-  cleanup:
+  job-cache-cleanup:
     runs-on: ubuntu-latest
     needs: [lint, test]
     if: always()
     uses: brianespinosa/job-root-cache/.github/workflows/cleanup.yml@main
-    secrets: inherit
 ```
 
 ## Assumptions
