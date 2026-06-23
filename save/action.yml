@@ -10,7 +10,7 @@ runs:
   using: 'composite'
 
   steps:
-    - uses: actions/cache/save@v5
+    - uses: actions/cache/save@v6
       with:
         path: ./
         key: job-setup-cache-${{ github.run_id }}-${{ runner.os }}
